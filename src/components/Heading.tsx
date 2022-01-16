@@ -2,10 +2,10 @@ type HeadingProps = {
     children: string
 }
 
-const Heading = (props: HeadingProps) => {
+const Heading = ({ children }: HeadingProps) => {
     return (
         <div>
-            {props.children}
+            {children}
         </div>
     );
 };

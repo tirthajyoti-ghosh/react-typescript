@@ -2,9 +2,9 @@ type ContainerProps = {
     styles: React.CSSProperties
 };
 
-const Container = (props: ContainerProps) => {
+const Container = ({ styles }: ContainerProps) => {
     return (
-        <div style={props.styles}>
+        <div style={styles}>
             A container
         </div>
     );

@@ -2,10 +2,10 @@ type ButtonProps = {
    handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({ handleClick }: ButtonProps) => {
     return (
         <div>
-            <button onClick={props.handleClick}>Click me</button>
+            <button onClick={handleClick}>Click me</button>
         </div>
     );
 };

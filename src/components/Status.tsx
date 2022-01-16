@@ -2,12 +2,12 @@ type StatusProps = {
     status: 'loading' | 'success' | 'error'
 }
 
-const Status = (props: StatusProps) => {
+const Status = ({ status }: StatusProps) => {
     return (
         <div>
-            {props.status === 'loading' && 'Loading...'}
-            {props.status === 'success' && 'Data loaded successfully'}
-            {props.status === 'error' && 'Error loading data'}
+            {status === 'loading' && 'Loading...'}
+            {status === 'success' && 'Data loaded successfully'}
+            {status === 'error' && 'Error loading data'}
         </div>
     );
 };

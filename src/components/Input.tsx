@@ -5,10 +5,10 @@ type InputProps = {
     value: string
 }
 
-const Input = (props: InputProps) => {
+const Input = ({ value, handleChange }: InputProps) => {
     return (
         <div>
-            <input type="text" value={props.value} onChange={props.handleChange} />
+            <input type="text" value={value} onChange={handleChange} />
         </div>
     );
 };
