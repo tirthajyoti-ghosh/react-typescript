@@ -7,6 +7,7 @@ import Input from './components/Input';
 import Oscar from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import User from './components/state/User';
 import Status from './components/Status';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Button handleClick={(e) => console.log('Button', e)} />
       <Input value="" handleChange={(e) => console.log('Input', e)} />
       <Container styles={{ border: '1px solid black', padding: '3rem' }} />
+      <User />
     </div>
   );
 }

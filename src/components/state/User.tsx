@@ -6,7 +6,8 @@ type UserState = {
 }
 
 const User = () => {
-    const [user, setUser] = useState<UserState | null>(null);
+    // const [user, setUser] = useState<UserState | null>(null);
+    const [user, setUser] = useState<UserState>({} as UserState);
 
     const handleLogin = () => {
         setUser({
@@ -15,16 +16,16 @@ const User = () => {
         });
     };
 
-    const handleLogout = () => {
-        setUser(null);
-    };
+    // const handleLogout = () => {
+    //     setUser(null);
+    // };
 
     return (
         <div>
             <button onClick={handleLogin}>Login</button>        
-            <button onClick={handleLogout}>Logout</button>
+            {/* <button onClick={handleLogout}>Logout</button> */}
             
-            <p>User is {user?.email} {user?.name}</p>
+            <p>User is {user.email} {user.name}</p>
         </div>
     );
 };
