@@ -1,7 +1,10 @@
 import './App.css';
 import { Greet } from './components/Greet';
+import Heading from './components/Heading';
+import Oscar from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
+import Status from './components/Status';
 
 function App() {
   const names = [
@@ -12,9 +15,16 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="World" messageCount={20} isLoggedIn={false} />
+      <Greet name="World" isLoggedIn={false} />
       <Person name={{ first: 'First', last: 'Last' }} />
       <PersonList names={names} />
+      <Status status="loading" />
+      <Heading>
+        This is a heading
+      </Heading>
+      <Oscar>
+        <Heading>The Oscar</Heading>
+      </Oscar>
     </div>
   );
 }
